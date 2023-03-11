@@ -1,9 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'docker:23.0.1-cli-alpine3.17'
-        }
-    }
+    agent any //{
+       // docker {
+        //    image 'docker:23.0.1-cli-alpine3.17'
+        //}
+    //}
     stages {
         stage('Build and Push') {
             steps {
