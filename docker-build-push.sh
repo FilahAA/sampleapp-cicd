@@ -10,7 +10,7 @@ docker images
 docker tag sampleapp-2:${BUILD_ID} registry.hub.docker.com/filahaa/sampleapp-2:${BUILD_ID}
 
 # login ke Docker Hub
-docker login -u filahaa -p ${DOCKERHUB_PASSWORD}
+echo ${DOCKERHUB_CREDENTIALS_PSW} | docker login -u ${DOCKERHUB_CREDENTIALS_USR} --password-stdin
 
 # mengunggah image ke Docker HUB
 docker push registry.hub.docker.com/filahaa/sampleapp-2:${BUILD_ID}
